@@ -1,0 +1,12 @@
+extends layout
+
+block content 
+    h1= title
+    p Fill out the form below to add a new message 
+
+    form(action="/new" method="POST")  
+        label(for="messageText") Message Text
+        textarea(name="messageText" required )
+        label(for="user") User 
+        input(type="text" name="user" required) 
+        button(type="submit") Leave a message
